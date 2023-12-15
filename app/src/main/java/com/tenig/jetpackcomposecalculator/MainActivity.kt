@@ -19,6 +19,14 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposeCalculatorTheme {
+                CalculatorScreen(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(color = Color.DarkGray)
+                        .padding(16.dp),
+                    buttonSpacing = 8.dp,
+                    calcViewModel =  viewModel<CalculatorViewModel>()
+                )
             }
         }
     }
